@@ -1,0 +1,139 @@
+<div class="flex flex-col min-h-screen">
+  <header>
+    <nav
+      class="
+        relative
+        flex flex-wrap
+        items-center
+        justify-between
+        px-2
+        py-3
+        bg-gray-900
+        mb-3
+      "
+    >
+      <div
+        class="
+          container
+          px-4
+          mx-auto
+          flex flex-wrap
+          items-center
+          justify-between
+        "
+      >
+        <div
+          class="
+            w-full
+            relative
+            flex
+            justify-between
+            lg:w-auto
+            px-4
+            lg:static lg:block lg:justify-start
+          "
+        >
+          <a
+            class="
+              text-sm
+              font-bold
+              leading-relaxed
+              inline-block
+              mr-4
+              py-2
+              whitespace-nowrap
+              uppercase
+              text-white
+            "
+            routerLink=""
+          >
+            FINDING FALCONE
+          </a>
+          <button
+            class="
+              text-white
+              cursor-pointer
+              text-xl
+              leading-none
+              px-3
+              py-1
+              border border-solid border-transparent
+              rounded
+              bg-transparent
+              block
+              lg:hidden
+              outline-none
+              focus:outline-none
+            "
+            type="button"
+            (click)="toggleNavbar()"
+          >
+            <i class="bars icon"></i>
+          </button>
+        </div>
+        <div
+          [ngClass]="{ hidden: !showMenu, flex: showMenu }"
+          class="lg:flex lg:flex-grow items-center"
+        >
+          <ul class="flex flex-col lg:flex-row list-none ml-auto">
+            <li class="nav-item" (click)="_service.resetSearch()">
+              <a
+                class="
+                  px-3
+                  py-2
+                  flex
+                  items-center
+                  text-xs
+                  uppercase
+                  font-bold
+                  leading-snug
+                  text-white
+                  hover:opacity-75
+                "
+              >
+                <span class="ml-2">Reset</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="
+                  px-3
+                  py-2
+                  flex
+                  items-center
+                  text-xs
+                  uppercase
+                  font-bold
+                  leading-snug
+                  text-white
+                  hover:opacity-75
+                "
+                href="https://www.geektrust.in/"
+                target="_blank"
+              >
+                <img
+                  src="https://geektrust.sgp1.cdn.digitaloceanspaces.com/assets/images/logo-geektrust-hub-green.png"
+                  style="width: 100px"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="flex-grow">
+    <router-outlet></router-outlet>
+  </main>
+
+  <footer class="mt-2 p-6 bg-gray-900 text-gray-100">
+    <div class="flex items-center justify-center px-6 text-sm">
+      <span class="dark:text-coolGray-400">
+        Coding Problem -
+        <a href="https://www.geektrust.in/finding-falcone" target="_blank"
+          >www.geektrust.in/finding-falcone</a
+        >
+      </span>
+    </div>
+  </footer>
+</div>
