@@ -19,7 +19,7 @@ declare var $: any;
   templateUrl: './travel.component.html',
   styleUrls: ['./travel.component.scss'],
 })
-export class TravelComponent implements OnInit, AfterViewInit {
+export class TravelComponent implements OnInit {
   constructor() {}
 
   @Input() planets!: Planet[];
@@ -36,16 +36,7 @@ export class TravelComponent implements OnInit, AfterViewInit {
   timeTaken: number = 0;
   showRadios: boolean = false;
 
-  ngAfterViewInit(): void {
-    const that = this;
-    $('.ui.dropdown.ctr' + this.num).dropdown({
-      onChange: (e: any, text: any, choice: any) => {
-        that.togglePlanet(e);
-      },
-    });
-  }
-
-  togglePlanet(e: string) {
+  togglePlanet(e: string | number) {
     this.showRadios = false;
     this.timeTaken = 0;
 

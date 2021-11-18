@@ -1,0 +1,39 @@
+<!-- <div class="ui fluid dropdown labeled icon button my-2 ctr{{ num }}">
+    <i class="globe icon"></i>
+    <div class="default text">Select a Planet</div>
+    <div class="menu">
+      <div class="ui icon search input">
+        <i class="search icon"></i>
+        <input type="text" placeholder="Search planets..." />
+      </div>
+      <div class="divider"></div>
+      <div class="header">
+        <i class="globe icon"></i>
+        Available Planets
+      </div>
+      <div class="scrolling menu">
+        <ng-container *ngFor="let planet of planets">
+          <div
+            class="item flex"
+            *ngIf="!planet.selected"
+            [attr.data-value]="planet.name"
+          >
+            <img
+              class="ui mini object-contain avatar image"
+              [src]="'assets/icons/planets/' + planet.name + '.ico'"
+            />
+            <span class="truncate">{{ planet.name }}</span>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div> -->
+
+<div class="ui {{ class }} dropdown item" #dropdown>
+  <i *ngIf="icon" class="{{ icon }} icon"></i>
+  <div *ngIf="title" class="default text">{{ title }}</div>
+  <!-- <i class="dropdown icon"></i> -->
+  <div class="menu">
+    <ng-content></ng-content>
+  </div>
+</div>

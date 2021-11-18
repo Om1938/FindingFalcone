@@ -11,6 +11,8 @@ import { ChooseVehicleComponent } from './components/choose-vehicle/choose-vehic
 import { PostInterceptor } from './post.interceptor';
 
 import { ResultComponent } from './components/result/result.component';
+import { DropdownComponent } from './components/util/dropdown/dropdown.component';
+import { DropdownItemComponent } from './components/util/dropdown-item/dropdown-item.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ResultComponent } from './components/result/result.component';
     TravelComponent,
     ChooseVehicleComponent,
     ResultComponent,
+    DropdownComponent,
+    DropdownItemComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [
