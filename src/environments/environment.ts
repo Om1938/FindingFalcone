@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  server: 'https://findfalcone.herokuapp.com/',
+  server: 'https://findfalcone.geektrust.com/',
 };
 
 /*
